@@ -13,6 +13,7 @@ import { TechnologiesModule } from './technologies/technologies.module';
     }),
     MongooseModule.forRoot(process.env.MONGO_URI, {
       useNewUrlParser: true,
+      useUnifiedTopology: true,
     }),
     TechnologiesModule,
   ],
