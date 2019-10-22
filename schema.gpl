@@ -3,6 +3,28 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type Mutation {
+  createTechnology(input: TechnologyInput!): TechnologyDto!
+  updateTechnology(input: TechnologyInput!, id: String!): TechnologyDto!
+  deleteTechnology(id: String!): TechnologyDto!
+}
+
 type Query {
-  getHello: String!
+  getTechnologies: [TechnologyDto!]!
+  getTechnology: TechnologyDto!
+}
+
+type TechnologyDto {
+  id: ID!
+  name: String!
+  description: String!
+  url: String!
+  imageUrl: String!
+}
+
+input TechnologyInput {
+  name: String!
+  description: String!
+  url: String!
+  imageUrl: String!
 }
