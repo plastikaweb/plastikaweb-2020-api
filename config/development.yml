@@ -1,0 +1,2 @@
+db:
+  uri: "mongodb://localhost/plastikaweb"
